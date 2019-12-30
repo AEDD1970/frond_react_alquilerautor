@@ -3,7 +3,6 @@
 import React from 'react';
 import api from '../utils/api';
 
-// COMPONENT
 class HomePage extends React.Component {
     constructor(props){
         super(props);
@@ -29,25 +28,26 @@ class HomePage extends React.Component {
         return(
             <div>
                 <form style={{marginTop: 30}}>
+                    <h1>Datos Propietario</h1>
                     <div className="form-group">
                         <label >Cedula</label>
-                        <input type="number" className="form-control" onChange={e => this.setState({cedula: e})}  />
+                        <input type="number" className="form-control" onChange={e => this.setState({cedula: e.target.value})}  />
                     </div>
                     <div className="form-group">
                         <label >Licencia</label>
-                        <input type="text" className="form-control" onChange={e => this.setState({licencia: e})} />
+                        <input type="text" className="form-control" onChange={e => this.setState({licencia: e.target.value})} />
                     </div>
                     <div className="form-group">
                         <label >Correo</label>
-                        <input type="email" className="form-control" onChange={e => this.setState({correo: e})} />
+                        <input type="email" className="form-control" onChange={e => this.setState({correo: e.target.value})} />
                     </div>
                     <div className="form-group">
                         <label >Teléfono</label>
-                        <input type="number" className="form-control" onChange={e => this.setState({telefonos: e})} />
+                        <input type="number" className="form-control" onChange={e => this.setState({telefonos: e.target.value})} />
                     </div>
                     <div className="form-group">
                         <label >Dirección</label>
-                        <input type="text" className="form-control" onChange={e => this.setState({direccion: e})} />
+                        <input type="text" className="form-control" onChange={e => this.setState({direccion: e.target.value})} />
                     </div>
                 </form>
                 <button className="btn btn-primary" onClick={() => this.submit()}>Submit</button>

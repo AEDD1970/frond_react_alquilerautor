@@ -6,7 +6,7 @@ import { NavLink } from 'react-router-dom';
 // COMPONENT
 
 export const Header = () => (
-    <nav className="navbar navbar-expand-lg navbar-light alert-dark">
+    <nav className="navbar navbar-expand-lg navbar-light" style={{backgroundColor: '#e3f2fd'}}>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu">
             <span className="navbar-toggler-icon"></span>
         </button>
@@ -25,7 +25,12 @@ export const Header = () => (
                 </li>
                 <li className="nav-item">
                     <div className="nav-link">
-                        <NavLink to='/about' activeClassName='menu selected'>ABOUT</NavLink>
+                        <NavLink to='/admin' activeClassName='menu selected'>ADMINISTRADOR</NavLink>
+                    </div>
+                </li>
+                <li className="nav-item">
+                    <div className="nav-link">
+                        <NavLink to='/travel' activeClassName='menu selected'>VIAJES</NavLink>
                     </div>
                 </li>
             </ul>

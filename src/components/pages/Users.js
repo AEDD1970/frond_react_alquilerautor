@@ -25,17 +25,18 @@ class UserPage extends React.Component {
         return(
             <div>
                 <form style={{marginTop: 30}}>
+                    <h1>Datos cliente</h1>
                     <div className="form-group">
                         <label >Cedula</label>
-                        <input type="number" className="form-control"  />
+                        <input type="number" className="form-control" onChange={e => this.setState({cedula: e.target.value})}  />
                     </div>
                     <div className="form-group">
                         <label >Correo</label>
-                        <input type="email" className="form-control" />
+                        <input type="email" className="form-control" onChange={e => this.setState({correo: e.target.value})} />
                     </div>
                     <div className="form-group">
                         <label >Teléfono</label>
-                        <input type="number" className="form-control" />
+                        <input type="number" className="form-control" onChange={e => this.setState({telefono: e.target.value})} />
                     </div>
                 </form>
                 <button className="btn btn-primary" onClick={() => this.submit()}>Submit</button>
